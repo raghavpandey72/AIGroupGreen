@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anand International Consultants Ltd. (AICL) | Forensic Services & Investigations</title>
+    <meta name="description" content="AICL delivers handwriting & fingerprint analysis, modus operandi studies, and legal support for insurance and forensic cases.">
+
+    <link rel="canonical" href="https://www.aigroupug.com/AICL.html">
+
+    <meta property="og:title" content="AICL – Anand International Consultants Ltd.">
+    <meta property="og:description" content="Forensic handwriting & fingerprint analysis, modus operandi, and legal support.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.aigroupug.com/AICL.html">
+    <meta property="og:image" content="https://www.aigroupug.com/assets/logo.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="AICL – Forensic Services">
+    <meta name="twitter:description" content="Handwriting & fingerprint analysis, modus operandi, legal/general support.">
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"Anand International Consultants Ltd. (AICL)",
+      "url":"https://www.aigroupug.com/AICL.html",
+      "parentOrganization": {
+        "@type":"Organization",
+        "name":"Anand International Consultants Ltd.",
+        "url":"https://www.aigroupug.com/"
+      },
+      "department":[
+        {"@type":"Service","name":"Identification & Handwriting"},
+        {"@type":"Service","name":"Fingerprints Analysis"},
+        {"@type":"Service","name":"Modus Operandi"},
+        {"@type":"Service","name":"Legal & General Support"}
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="AICL.css">
+    <link rel="stylesheet" href="cubefx.css">
+
+    <!-- Three.js for cube effect -->
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="cubefx.js" defer></script>
+<base target="_blank">
+</head>
+<body>
+    <!-- Cube Background -->
+    <div id="cube-bg" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="assets/logo.png" target="_self" alt="AICL Logo">
+            </div>
+
+            <nav class="desktop-nav">
+                <div class="nav-item">
+                    <a href="index.html" target="_self" class="nav-link">Home</a>
+                </div>
+                <div class="nav-item">
+                    <button class="nav-link" onclick="toggleDesktopDropdown()" style="background: none; border: none; cursor: pointer;">
+                        Companies <i class="fas fa-caret-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="desktopDropdown">
+                        <li><a href="AICL.html" target="_self"class="dropdown-item active">AICL</a></li>
+                        <li><a href="AILAL.html" target="_self" class="dropdown-item">AILAL</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item">
+                    <a href="services.html" target="_self" class="nav-link">Services</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="clients.html" target="_self" class="nav-link">Clients</a>
+                </div>
+                <div class="nav-item">
+                    <a href="gallery.html" target="_self" class="nav-link">Gallery</a>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" target="_self" class="nav-link">Contact</a>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                    <span class="menu-label">Menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="backdrop" id="backdrop"></div>
+    <nav class="menu-overlay" id="mobileMenu">
+        <div class="menu-header">
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="index.html" target="_self" class="menu-link">Home <i class="fas fa-chevron-right"></i></a>
+            </li>
+            <li class="menu-item">
+                <button class="menu-link"  onclick="toggleSubmenu()" style="background: none;">
+                    <span>Companies</span>
+                    <i class="fas fa-chevron-down" id="submenuIcon"></i>
+                </button>
+                <ul class="submenu" id="mobileSubmenu">
+                    <li><a href="AICL.html" target="_self" class="active">AICL</a></li>
+                    <li><a href="AILAL.html" target="_self">AILAL</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="services.html" target="_self" class="menu-link">Services <i class="fas fa-chevron-right"></i></a>
+            </li>
+            <li class="menu-item">
+                <a href="clients.html" target="_self" class="menu-link">Clients <i class="fas fa-chevron-right"></i></a>
+            </li>
+            <li class="menu-item">
+                <a href="gallery.html" target="_self" class="menu-link">Gallery <i class="fas fa-chevron-right"></i></a>
+            </li>
+        </ul>
+
+        <div class="menu-footer">
+            <button class="menu-contact-btn" onclick="window.location.href='index.html#contact'">
+                <i class="far fa-comment"></i> Contact Us
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Forensic Experts</span>
+                <h1>Anand International Consultants Limited</h1>
+                <p class="hero-subtitle">Delivering exceptional forensic services with over 30 years of expertise in handwriting analysis, fingerprint examination, and investigative solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-content">
+                <p>
+                    Welcome to Anand International Consultants Limited, where we deliver
+                    exceptional forensic services. Empowered by our team of seasoned
+                    professionals, we excel in the field of forensic science with a
+                    focus on:
+                </p>
+                <ul>
+                    <li>Handwriting Expertise</li>
+                    <li>Fingerprints Analysis</li>
+                    <li>Modus Operandi</li>
+                    <li>Investigation</li>
+                    <li>Legal and General</li>
+                    <li>Consultations</li>
+                </ul>
+                <p>
+                    Our commitment is to deliver accurate & reliable forensic solutions
+                    tailored to meet your investigative needs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <!-- Services Section -->
+<section id="services" class="services-section">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-file-signature"></i>
+                </div>
+                <h3>Identification and Handwriting</h3>
+                <p>
+                    Our company specializes in advanced identification and handwriting
+                    analysis to uncover the authenticity of various documents...
+                </p>
+                <button onclick="openModal('modal5')">Know More</button>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <h3>Fingerprints</h3>
+                <p>
+                    Our company provides comprehensive fingerprint analysis services,
+                    encompassing a wide range of print types including latent
+                    fingerprints...
+                </p>
+                <button onclick="openModal('modal6')">Know More</button>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-search-location"></i>
+                </div>
+                <h3>Modus Operandi</h3>
+                <p>
+                    Our company excels in analyzing the modus operandi of criminal
+                    activities through meticulous examination of crime scenes...
+                </p>
+                <button onclick="openModal('modal7')">Know More</button>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h3>Legal/General</h3>
+                <p>
+                    Our company provides expert legal and general support services
+                    essential for insurance and forensic cases...
+                </p>
+                <button onclick="openModal('modal8')">Know More</button>
+            </div>
+        </div>
+    </div>
+    <!-- ... rest of modals ... -->
+
+        <!-- Modals -->
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal5')">&times;</span>
+                <h3>Identification and Handwriting</h3>
+                <p>
+                    Our company specializes in advanced identification and handwriting
+                    analysis to uncover the authenticity of various documents. We
+                    address model forgery, traced forgery, and forgery by
+                    impersonation with precise forensic techniques. Our experts are
+                    skilled in detecting block forgery and identifying typewriting and
+                    stamped impressions. We also conduct thorough examinations of
+                    embossing paper seals and water seals to validate their integrity.
+                    Additionally, our services include the analysis of indented and
+                    disguised writing to reveal concealed or altered information. By
+                    leveraging cutting-edge technology and extensive expertise, we
+                    ensure accurate and reliable results for all forensic handwriting
+                    and document identification needs.
+                </p>
+            </div>
+        </div>
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal6')">&times;</span>
+                <h3>Fingerprints</h3>
+                <p>
+                    Our company provides comprehensive fingerprint analysis services,
+                    encompassing a wide range of print types including latent
+                    fingerprints, chance prints, inked prints, block prints, palm
+                    prints, foot prints, and shoe prints. We utilize advanced
+                    techniques such as poroscopy for detailed analysis. Our experts
+                    are adept at lifting prints from crime scenes and understanding
+                    the correct methods for obtaining and preserving them. We employ
+                    scale photography to ensure accurate documentation of print
+                    evidence. By integrating these specialized techniques, we deliver
+                    precise and actionable forensic insights, crucial for solving
+                    cases and supporting legal proceedings.
+                </p>
+            </div>
+        </div>
+        <div id="modal7" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal7')">&times;</span>
+                <h3>Modus Operandi</h3>
+                <p>
+                    Our company excels in analyzing the modus operandi of criminal
+                    activities through meticulous examination of crime scenes. We
+                    investigate the entrance and exit routes of culprits to understand
+                    their methods and movements during incidents. Our experts also
+                    analyze tool marks left at crime scenes, particularly in cases of
+                    theft and burglary, to identify the tools used and their potential
+                    impact. Additionally, we conduct thorough site inspections based
+                    on the principles of exchange, which examine how evidence is
+                    transferred between the perpetrator, victim, and crime scene. This
+                    comprehensive approach helps us reconstruct criminal activities
+                    accurately, providing crucial insights for investigations and
+                    legal proceedings.
+                </p>
+            </div>
+        </div>
+        <div id="modal8" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal8')">&times;</span>
+                <h3>Legal and General</h3>
+                <p>
+                    Our company provides expert legal and general support services
+                    essential for insurance and forensic cases. We specialize in the
+                    recovery of insurance claims through subrogation, ensuring that
+                    rightful compensation is secured. Our professionals have extensive
+                    experience appearing in court as witnesses and cross-examiners,
+                    offering expert testimony in both insurance and forensic cases. We
+                    are skilled in taking detailed statements during investigations to
+                    support accurate case documentation. Additionally, we diligently
+                    follow up on the chain of fraud or crime, linking our findings
+                    with police investigations and prosecution efforts. This
+                    integrated approach ensures a comprehensive handling of legal and
+                    forensic matters, facilitating effective resolution and justice.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Main Links</h4>
+                <ul>
+                    <li><a href="index.html" target="_self">About Us</a></li>
+                    <li><a href="services.html" target="_self">Services</a></li>
+                    <li><a href="clients.html" target="_self">Clients</a></li>
+                    <li><a href="gallery.html" target="_self">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Companies</h4>
+                <ul>
+                    <li><a href="AICL.html" target="_self">AICL</a></li>
+                    <li><a href="AILAL.html" target="_self">AILAL</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                   <a href="https://www.facebook.com/profile.php?id=61587048585233" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/aigroupug/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/ai-group-30602a3aa/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Locate Us</h4>
+                <div class="location-info">
+                    <p><i class="fas fa-building"></i> R-21, 2nd Floor Capital Shoppers Nakawa, Kampala, Uganda, E.A.</p>
+                    <p><i class="fas fa-map-marker-alt"></i> R-5, 4th Floor Capital Shoppers Nakawa, Plot No. 1-3, P.O. Box 11230</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Anand International Consultants Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const closeMenu = document.getElementById('closeMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const backdrop = document.getElementById('backdrop');
+        const body = document.body;
+
+        function openMenu() {
+            mobileMenu.classList.add('active');
+            backdrop.classList.add('active');
+            body.style.overflow = 'hidden';
+        }
+
+        function closeMenuFn() {
+            mobileMenu.classList.remove('active');
+            backdrop.classList.remove('active');
+            body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        closeMenu.addEventListener('click', closeMenuFn);
+        backdrop.addEventListener('click', closeMenuFn);
+
+        // Submenu Toggle
+        function toggleSubmenu() {
+            const submenu = document.getElementById('mobileSubmenu');
+            const icon = document.getElementById('submenuIcon');
+            submenu.classList.toggle('active');
+            icon.classList.toggle('fa-chevron-up');
+            icon.classList.toggle('fa-chevron-down');
+        }
+
+        // Desktop Dropdown
+        function toggleDesktopDropdown() {
+            const dropdown = document.getElementById('desktopDropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('desktopDropdown');
+            const button = e.target.closest('.nav-item');
+            if (!button && dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Modal Functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "";
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = "";
+            }
+        }
+
+        // Modal Functions
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
+    } else {
+        console.error("Modal not found: " + modalId);
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+    }
+}
+
+// Close modal when clicking on backdrop (outside content)
+function closeModalOnBackdrop(event, modalId) {
+    if (event.target.classList.contains('modal')) {
+        closeModal(modalId);
+    }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            if (modal.style.display === "block") {
+                modal.style.display = "none";
+                document.body.style.overflow = "";
+            }
+        });
+    }
+});
+    </script>
+</body>
+</html>

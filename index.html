@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anand International Consultants Ltd. | Forensic & Insurance Loss Assessment</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Cube FX & Styles -->
+    <link rel="stylesheet" href="cubefx.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="cubefx.js" defer></script>
+    
+    <base target="_blank">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div id="cube-bg" aria-hidden="true"></div>
+        <div class="header-top">
+            <div class="logo">
+            <img src="assets/logo.png" alt="AICL Logo">
+        </div>
+            
+            <nav class="desktop-nav">
+                <div class="nav-item">
+                    <a href="index.html" target="_self" class="nav-link">Home</a>
+                </div>
+                <div class="nav-item">
+                    <button class="nav-link" onclick="toggleDesktopDropdown()" style="background: none; border: none; cursor: pointer;">
+                        Companies <i class="fas fa-caret-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="desktopDropdown">
+                        <li><a href="AICL.html" target="_self"target="_self" class="dropdown-item">AICL</a></li>
+                        <li><a href="AILAL.html" target="_self" class="dropdown-item">AILAL</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item">
+                    <a href="services.html" target="_self" class="nav-link">Services</a>
+                </div>
+               
+                <div class="nav-item">
+                    <a href="clients.html" target="_self" class="nav-link">Clients</a>
+                </div>
+                <div class="nav-item">
+                    <a href="gallery.html" target="_self" class="nav-link">Gallery</a></div>
+                <div class="nav-item">
+                    <a href="#contact" target="_self" class="nav-link">Contact</a>
+                </div>
+            </nav>
+            
+            <div class="header-actions">                
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                    <span class="menu-label">Menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="backdrop" id="backdrop"></div>
+    <nav class="menu-overlay" id="mobileMenu">
+        <div class="menu-header">
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="index.html" target="_self" class="menu-link">Home <i class="fas fa-chevron-right"></i></a>
+            </li>
+            <li class="menu-item">
+                <button class="menu-link" onclick="toggleSubmenu()" style="background: none;">
+                    <span>Companies</span>
+                    <i class="fas fa-chevron-down" id="submenuIcon"></i>
+                </button>
+                <ul class="submenu" id="mobileSubmenu">
+                    <li><a href="AICL.html" target="_self">AICL</a></li>
+                    <li><a href="AILAL.html" target="_self">AILAL</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="services.html" target="_self" class="menu-link">Services <i class="fas fa-chevron-right"></i></a>
+            </li>
+           
+            <li class="menu-item">
+                <a href="clients.html" target="_self" class="menu-link">Clients <i class="fas fa-chevron-right"></i></a>
+            </li>
+            <li class="menu-item">
+                <a href="gallery.html" target="_self" class="menu-link">Gallery <i class="fas fa-chevron-right"></i></a>
+            </li>
+        </ul>
+        
+        <div class="menu-footer">
+           <button class="menu-contact-btn" onclick="window.location.href='#contact'">
+                <i class="far fa-comment"></i> Contact
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">41+ Years of Excellence</div>
+                <h1>Trusted Loss Adjustment and Forensic Precision Powering Comprehensive Insurance Solutions Across Uganda and East Africa</h1>
+                <p class="hero-subtitle">We are committed to delivering comprehensive insurance solutions across Uganda and East Africa. Through AILAL, we offer risk advisory and loss assessment services. Through AICL, we provide thorough investigations and crime scene inspections executed with full forensic precision, including handwriting and fingerprint identification — all accredited by the authorities of Uganda, safeguarding integrity at every stage .</p>
+                <a href="services.html" class="hero-cta">
+                    Our Facts & Figures <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome" id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Welcome to Anand International Consultants Ltd.</h2>
+                <p class="lead-text">AICL is a leading firm specializing in investigations, surveyor & loss assessor services, and forensic expertise across East Africa. Our broad service portfolio with qualified and independent expert services range from vehicle inspections and expert appraisals to claims services, forensic analysis, and liability assessment.</p>
+                <br>
+                <p class="lead-text">With over 30 years of experience, we ensure prompt delivery and adherence to the highest standards of integrity, professionalism, and ethics, mitigating major losses with precision and efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-grid">
+                <article class="service-card fade-in" onclick="openModal('modal1')" style="--index: 0">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" alt="Property Valuation" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Valuation & Property Inspection</h3>
+                        <p class="service-desc">Comprehensive valuation and inspection services to assess the true worth and condition of residential, commercial, and industrial properties.</p>
+                        <span class="learn-more">Learn more <i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </article>
+
+                <article class="service-card fade-in" onclick="openModal('modal2')" style="--index: 1">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop" alt="Insurance Services" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">General Insurance Services</h3>
+                        <p class="service-desc">Handling diverse insurance claims including motor accidents, engineering, business interruption, burglary, and marine claims.</p>
+                        <span class="learn-more">Learn more <i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </article>
+
+                <article class="service-card fade-in" onclick="openModal('modal3')" style="--index: 2">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop" alt="Liability Claims" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Liability Insurance Claims</h3>
+                        <p class="service-desc">Expert handling of third-party motor accidents, professional indemnity, public liability, and employers' liability claims.</p>
+                        <span class="learn-more">Learn more <i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </article>
+
+                <article class="service-card fade-in" onclick="openModal('modal4')" style="--index: 3">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop" alt="Life Insurance" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Life Insurance Claims</h3>
+                        <p class="service-desc">Compassionate and efficient processing of life insurance claims ensuring beneficiaries receive entitled support and compensation.</p>
+                        <span class="learn-more">Learn more <i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </article>
+
+                <article class="service-card fade-in" onclick="openModal('modal5')" style="--index: 4">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600&h=400&fit=crop" alt="Handwriting Analysis" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Forensic Handwriting Analysis</h3>
+                        <p class="service-desc">Advanced identification services detecting model forgery, traced forgery, and impersonation with precise forensic techniques.</p>
+                        <span class="learn-more">Learn more <i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </article>
+
+                <article class="service-card fade-in" onclick="openModal('modal6')" style="--index: 5">
+                    <img src="https://images.unsplash.com/photo-1555421689-3f034debb7a6?w=600&h=400&fit=crop" alt="Fingerprint Analysis" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Fingerprint Analysis</h3>
+                        <p class="service-desc">Comprehensive fingerprint analysis including latent, chance, inked, and palm prints using advanced poroscopy techniques.</p>
+                        <span class="learn-more">Learn more <i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </article>
+
+                <article class="service-card fade-in" onclick="openModal('modal7')" style="--index: 6">
+                    <img src="https://images.unsplash.com/photo-1453873419266-ec688029c5d9?w=600&h=400&fit=crop" alt="Crime Scene" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Modus Operandi Analysis</h3>
+                        <p class="service-desc">Meticulous crime scene examination analyzing entrance/exit routes, tool marks, and reconstructing criminal activities.</p>
+                        <span class="learn-more">Learn more <i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </article>
+
+                <article class="service-card fade-in" onclick="openModal('modal8')" style="--index: 7">
+                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=600&h=400&fit=crop" alt="Legal Support" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Legal & General Support</h3>
+                        <p class="service-desc">Expert legal support including recovery through subrogation, court appearances, and detailed statement-taking.</p>
+                        <span class="learn-more">Learn more <i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Homepage</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span>Contact</span>
+            </div>
+
+            <h2 class="contact-title">Contact us!</h2>
+            <h3 class="contact-subtitle">Your questions and wishes are important to us.</h3>
+            <p class="contact-text">Please fill out the following form to send us your request / questions or comments. We will get in touch with you as soon as possible.<br><br>Thank you.</p>
+            <p class="required-note">Fields marked with * are compulsory and must be completed.</p>
+
+            <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <select class="form-control" required>
+                        <option value="" disabled selected>Title</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Dr.">Dr.</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="First name*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last name*" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="E-Mail*" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" class="form-control" placeholder="Phone number">
+                    <small style="color: var(--text-muted); font-size: 0.85rem;">Please enter a valid phone number based on your country selection.</small>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Organisation">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Street and number">
+                </div>
+
+                <!-- Country Selection with Error Handling -->
+                <div class="form-group">
+                    <div class="country-select-wrapper" id="countryWrapper">
+                        <select class="form-control" id="countrySelect" required>
+                            <option value="" disabled selected>Loading countries...</option>
+                        </select>
+                    </div>
+                    <div class="error-message" id="countryError">
+                        Failed to load countries. <button type="button" class="retry-btn" onclick="loadCountries()">Retry</button>
+                    </div>
+                </div>
+
+                <div class="form-group" id="stateGroup" style="display: none;">
+                    <select class="form-control" id="stateSelect" disabled>
+                        <option value="" disabled selected>Select State/Province</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="City">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="postalCode" placeholder="Postal Code / ZIP">
+                        <small style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem; display: block;" id="postalHint"></small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="Request and wishes*" required></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent">I hereby consent that AICL and its affiliated companies can process the data I have provided for advertising purposes in order to inform me via e-mail or phone regarding services, offers and news, or to invite me to complete customer satisfaction surveys.</label>
+                </div>
+
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                    We process your data to respond to your inquiry. You can find more information in our <a href="#" style="color: var(--primary-green);">data privacy information</a>.
+                </p>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span>Submit</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Locate Us Section -->
+    <section class="locate-us" id="locate">
+        <div class="container">
+            <h2 class="locate-title">Locate Us</h2>
+            <p class="locate-subtitle">Find our offices in Kampala</p>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.753655860715!2d32.612541174037574!3d0.32620796401274005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbef6d0cb081%3A0x1ab8a5c70dde4f2!2sCapital%20shoppers%2C%20New%20Port%20Bell%20Rd%2C%20Kampala%2C%20Uganda!5e0!3m2!1sen!2sin!4v1721968949845!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="map-info">
+                <div class="map-card">
+                    <h4><i class="fas fa-building" style="margin-right: 0.5rem; color: var(--primary-green);"></i>Head Office</h4>
+                    <p>R-21, 2nd Floor Capital Shoppers Nakawa<br>New Port Bell Rd<br>Kampala, Uganda, E.A.</p>
+                </div>
+                <div class="map-card">
+                    <h4><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem; color: var(--primary-green);"></i>Branch Office</h4>
+                    <p>R-5, 4th Floor Capital Shoppers Nakawa<br>Plot No. 1-3, P.O. Box 11230<br>Kampala, Uganda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-badge" style="text-align: center; margin-bottom: 3rem;">
+            <div class="years-badge">41+</div>
+            <div style="font-size: 1rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1rem;">Years</div>
+            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+             <strong> A Legacy of Trust in </strong><strong>Insurance and Comprehensive Services</strong><strong> Across Uganda and East Africa</strong>.
+            </p>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Main Links</h4>
+                <ul>
+                    <li><a href="index.html" target="_self">About Us</a></li>
+                    <li><a href="services.html" target="_self">Services</a></li>
+                    <li><a href="clients.html" target="_self">Clients</a></li>
+                    <li><a href="gallery.html" target="_self">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Companies</h4>
+                <ul>
+                    <li><a href="AICL.html" target="_self">AICL</a></li>
+                    <li><a href="AILAL.html" target="_self">AILAL</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61587048585233" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/aigroupug/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/ai-group-30602a3aa/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">T & C</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Data Privacy Settings</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Anand International Consultants Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-button" id="chatButton">
+            <i class="fas fa-comment-dots"></i>
+            <span class="chat-tooltip">Chat with us</span>
+        </button>
+    </div>
+
+    <!-- Coming Soon Modal -->
+    <div class="coming-soon-modal" id="comingSoonModal">
+        <div class="coming-soon-content">
+            <div class="coming-soon-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Coming Soon!</h3>
+            <p>Our live chat feature is currently under development. Stay tuned for 24/7 instant support!</p>
+            <button class="close-coming-soon" onclick="closeComingSoon()">Got it</button>
+        </div>
+    </div>
+
+    <!-- Service Modals -->
+    <div id="modal1" class="modal" onclick="closeModalOnBackdrop(event, 'modal1')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal1')">&times;</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1rem;">Valuation/Inspection of Property</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8;">Our company provides comprehensive valuation and inspection services to accurately assess the true worth and condition of various properties. Leveraging over 30 years of expertise, our Managing Director leads a team of skilled professionals in conducting meticulous inspections. We evaluate structural integrity, construction quality, and overall condition of residential, commercial, and industrial properties. Our detailed reports meet all insurance and legal requirements, ensuring you have a clear understanding of your property's value and state.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal" onclick="closeModalOnBackdrop(event, 'modal2')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal2')">&times;</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1rem;">General Insurance Services</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8;">Our company specializes in a diverse range of insurance claims, including motor accident claims for OD, TPBI, and TPPD. We handle engineering claims, burglary claims, and business interruption claims like LOP and MLOP. Our services also include managing claims for deterioration of stock, shopkeeper's packages, and domestic insurance needs. We offer comprehensive coverage for workmen compensation and personal accident claims, ensuring your business and employees are fully protected.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal" onclick="closeModalOnBackdrop(event, 'modal3')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal3')">&times;</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1rem;">Liability Insurance Claims</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8;">Our company expertly handles a range of liability insurance claims, including compensation for third-party motor accident claims, both on a fault and no-fault basis. We manage claims related to professional indemnity, public liability, product liability, employers' liability, and director's liability. Our experienced team ensures fair assessment and swift resolution of all liability claims, protecting your business reputation and financial interests.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal" onclick="closeModalOnBackdrop(event, 'modal4')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal4')">&times;</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1rem;">Life Insurance Claims</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8;">Our company offers expert handling of life insurance claims, ensuring beneficiaries receive the support and compensation they are entitled to during challenging times. With over three decades of experience, our team provides thorough and compassionate assistance in processing claims, handling all necessary documentation and verification procedures with sensitivity and professionalism.</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal" onclick="closeModalOnBackdrop(event, 'modal5')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal5')">&times;</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1rem;">Identification and Handwriting</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8;">Our company specializes in advanced identification and handwriting analysis to uncover the authenticity of various documents. We address model forgery, traced forgery, and forgery by impersonation with precise forensic techniques. Our experts detect block forgery and validate embossing seals. Utilizing cutting-edge forensic methods, we provide conclusive evidence for legal proceedings and insurance investigations, helping establish the true origin of questioned documents.</p>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal" onclick="closeModalOnBackdrop(event, 'modal6')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal6')">&times;</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1rem;">Fingerprints</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8;">Our company provides comprehensive fingerprint analysis services, encompassing latent fingerprints, chance prints, inked prints, block prints, palm prints, foot prints, and shoe prints. We utilize advanced techniques like poroscopy and scale photography. Our forensic experts can identify individuals from partial prints and analyze ridge characteristics to provide definitive identification for criminal investigations and insurance fraud cases.</p>
+        </div>
+    </div>
+
+    <div id="modal7" class="modal" onclick="closeModalOnBackdrop(event, 'modal7')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal7')">&times;</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1rem;">Modus Operandi Analysis</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8;">Our company excels in analyzing the modus operandi of criminal activities through meticulous examination of crime scenes. We investigate entrance and exit routes, analyze tool marks, and conduct site inspections based on the principles of exchange. This systematic approach helps establish patterns in criminal behavior, link related incidents, and provide crucial evidence for prosecution and insurance claim verification.</p>
+        </div>
+    </div>
+
+    <div id="modal8" class="modal" onclick="closeModalOnBackdrop(event, 'modal8')">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal8')">&times;</button>
+            <h2 style="color: var(--primary-green); margin-bottom: 1rem;">Legal and General</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8;">Our company provides expert legal and general support services for insurance and forensic cases. We specialize in recovery through subrogation, court appearances as witnesses, and detailed statement-taking. Our legal team offers comprehensive litigation support, prepares expert reports, and provides testimony in court proceedings to support your case with factual, evidence-based information.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

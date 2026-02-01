@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Clients | Insurance & Forensic Partners – Anand International Consultants Ltd.</title>
+    <meta name="description"
+      content="Trusted by leading insurers in Uganda and East Africa including Alliance Africa, APA, Britam, CIC, Liberty Life, Sanlam, and more.">
+
+    <link rel="canonical" href="https://www.aigroup1.com/clients.html">
+
+    <meta property="og:title" content="Our Clients – AICL / AILAL">
+    <meta property="og:description" content="Trusted by leading insurers across East Africa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aigroupug.com/clients.html">
+    <meta property="og:image" content="https://www.aigroupug.com/assets/logo.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Our Clients – AICL / AILAL">
+    <meta name="twitter:description" content="Trusted by leading insurers across East Africa.">
+
+    <link rel="stylesheet" href="clients.css" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="cubefx.css">
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="cubefx.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="cube-bg" aria-hidden="true"></div>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Anand International Consultants Ltd. Logo">
+            </div>
+
+            <nav class="desktop-nav">
+                <div class="nav-item">
+                    <a href="index.html" target="_self" class="nav-link">Home</a>
+                </div>
+                <div class="nav-item">
+                    <button class="nav-link dropdown-toggle" onclick="toggleDesktopDropdown()">
+                        Companies <i class="fas fa-caret-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="desktopDropdown">
+                        <li><a href="AICL.html" target="_self" class="dropdown-item">AICL</a></li>
+                        <li><a href="AILAL.html" target="_self" class="dropdown-item">AILAL</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item">
+                    <a href="services.html" target="_self" class="nav-link">Services</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="clients.html" target="_self" class="nav-link active">Clients</a>
+                </div>
+                <div class="nav-item">
+                    <a href="gallery.html" target="_self" class="nav-link">Gallery</a>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html#contact" target="_self" class="nav-link">Contact</a>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                    <span class="menu-label">Menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="backdrop" id="backdrop"></div>
+    <nav class="menu-overlay" id="mobileMenu">
+        <div class="menu-header">
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="index.html"  target="_self"  class="menu-link">Home <i class="fas fa-chevron-right"></i></a>
+            </li>
+            <li class="menu-item">
+                <button class="menu-link" onclick="toggleSubmenu()">
+                    <span>Companies</span>
+                    <i class="fas fa-chevron-down" id="submenuIcon"></i>
+                </button>
+                <ul class="submenu" id="mobileSubmenu">
+                    <li><a href="AICL.html" target="_self">AICL</a></li>
+                    <li><a href="AILAL.html" target="_self">AILAL</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="services.html" target="_self" class="menu-link">Services <i class="fas fa-chevron-right"></i></a>
+            </li>
+           
+            <li class="menu-item">
+                <a href="clients.html" target="_self" class="menu-link active">Clients <i class="fas fa-chevron-right"></i></a>
+            </li>
+            <li class="menu-item">
+                <a href="gallery.html" target="_self" class="menu-link">Gallery <i class="fas fa-chevron-right"></i></a>
+            </li>
+        </ul>
+
+        <div class="menu-footer">
+            <button class="menu-contact-btn" onclick="window.location.href='index.html#contact'">
+                <i class="far fa-comment"></i> Contact Us
+            </button>
+        </div>
+    </nav>
+
+    <section class="clients-hero">
+    <div class="hero-content">
+        <span class="hero-badge">OUR CLIENTS</span>
+        <h1>CLIENTS</h1>
+        <p class="hero-subtitle">Proudly serving leading insurance providers across East Africa</p>
+    </div>
+    </section>
+        
+    <section class="clients">
+        <div class="container" id="clientsContainer">
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client1.png" alt="Alliance Africa General Insurance Limited" />
+            <div class="client-name">
+              Alliance Africa General Insurance Limited
+            </div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client2.png" alt="APA Insurance (U) Limited" />
+            <div class="client-name">APA Insurance (U) Limited</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client3.png" alt="Britam Insurance Uganda Limited" />
+            <div class="client-name">Britam Insurance Uganda Limited</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client4.png" alt="CIC General Insurance Uganda Limited" />
+            <div class="client-name">CIC General Insurance Uganda Limited</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client5.png" alt="First Insurance Company Limited (FICO)" />
+            <div class="client-name">
+              First Insurance Company Limited (FICO)
+            </div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client6.png" alt="ICEA General Insurance" />
+            <div class="client-name">ICEA General Insurance</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client7.png" alt="GA Insurance Uganda Limited" />
+            <div class="client-name">GA Insurance Uganda Limited</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client8.png" alt="GoldStar Life Assurance Company Limited" />
+            <div class="client-name">
+              GoldStar Life Assurance Company Limited
+            </div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client9.png" alt="MUA Insurance (Uganda) Limited" />
+            <div class="client-name">MUA Insurance (Uganda) Limited</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client10.png" alt="NIC General Insurance Company Limited" />
+            <div class="client-name">NIC General Insurance Company Limited</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client11.png" alt="PAX Insurance Limited" />
+            <div class="client-name">PAX Insurance Limited</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client12.png" alt="Statewide Insurance Company Limited" />
+            <div class="client-name">Statewide Insurance Company Limited</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client13.png" alt="The Jubilee Insurance Company of Uganda" />
+            <div class="client-name">
+              The Jubilee Insurance Company of Uganda
+            </div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client14.png" alt="TransAfrica Assurance Limited" />
+            <div class="client-name">TransAfrica Assurance Limited</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client15.png" alt="UAP Insurance Uganda Limited" />
+            <div class="client-name">UAP Insurance Uganda Limited</div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client16.png" alt="Liberty Life Assurance Company Limited" />
+            <div class="client-name">
+              Liberty Life Assurance Company Limited
+            </div>
+          </div>
+          <div class="client" tabindex="0">
+            <img src="assets/Profile/Client17.png" alt="Sanlam Life Insurance Company Limited" />
+            <div class="client-name">Sanlam Life Insurance Company Limited</div>
+          </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Main Links</h4>
+                <ul>
+                    <li><a href="index.html" target="_self">About Us</a></li>
+                    <li><a href="services.html" target="_self">Services</a></li>
+                    <li><a href="licenses.html" target="_self">Licenses</a></li>
+                    <li><a href="clients.html" target="_self">Clients</a></li>
+                    <li><a href="gallery.html" target="_self">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Companies</h4>
+                <ul>
+                    <li><a href="AICL.html" target="_self">AICL</a></li>
+                    <li><a href="AILAL.html" target="_self">AILAL</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61587048585233" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/aigroupug/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/ai-group-30602a3aa/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Locate Us</h4>
+                <div class="location-info">
+                    <p><i class="fas fa-building"></i> R-21, 2nd Floor Capital Shoppers Nakawa, Kampala, Uganda, E.A.</p>
+                    <p><i class="fas fa-map-marker-alt"></i> R-5, 4th Floor Capital Shoppers Nakawa, Plot No. 1-3, P.O. Box 11230</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Anand International Consultants Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const closeMenu = document.getElementById('closeMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const backdrop = document.getElementById('backdrop');
+        const body = document.body;
+
+        function openMenu() {
+            mobileMenu.classList.add('active');
+            backdrop.classList.add('active');
+            body.style.overflow = 'hidden';
+        }
+
+        function closeMenuFn() {
+            mobileMenu.classList.remove('active');
+            backdrop.classList.remove('active');
+            body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        closeMenu.addEventListener('click', closeMenuFn);
+        backdrop.addEventListener('click', closeMenuFn);
+
+        // Submenu Toggle
+        function toggleSubmenu() {
+            const submenu = document.getElementById('mobileSubmenu');
+            const icon = document.getElementById('submenuIcon');
+            submenu.classList.toggle('active');
+            icon.classList.toggle('fa-chevron-up');
+            icon.classList.toggle('fa-chevron-down');
+        }
+
+        // Desktop Dropdown
+        function toggleDesktopDropdown() {
+            const dropdown = document.getElementById('desktopDropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('desktopDropdown');
+            const button = e.target.closest('.nav-item');
+            if (!button && dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Client Carousel Animation (maintained from original script.js)
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.querySelector(".container");
+            const clients = Array.from(container.children);
+            const totalClients = clients.length;
+
+            // Duplicate clients to create a continuous scrolling effect
+            clients.forEach((client) => {
+                container.appendChild(client.cloneNode(true));
+            });
+
+            function setScrollSpeed() {
+                const containerWidth = container.scrollWidth / 2;
+                const scrollDuration = containerWidth / 150; // Slightly slower for better visibility
+                container.style.animationDuration = `${scrollDuration}s`;
+            }
+
+            setScrollSpeed();
+            window.addEventListener('resize', setScrollSpeed);
+        });
+    </script>
+  </body>
+</html>
